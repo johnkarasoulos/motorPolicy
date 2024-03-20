@@ -1,0 +1,41 @@
+<div>
+  <oj-sp-simple-create-edit id="oj_ssce1" page-title="Motor Policy V2"
+    page-subtitle="Please enter the details and submit: " avatar="{{$page.variables.avatar}}"
+    contextual-info-sticky="{{ $page.variables.contextualInfoSticky }}" on-sp-cancel="[[$listeners.ojSpCancel]]"
+    on-sp-go-to-parent="[[$listeners.ojSpGoToParent]]" display-mode="mixed" primary-action.label="Issue Policy"
+    on-sp-save="[[$listeners.ojSpSave]]" on-sp-primary-action="[[$listeners.ojSpSubmit]]" 
+  >
+    <oj-form-layout slot="main" class="oj-formlayout-full-width" label-edge="start">
+      <oj-validation-group id="postPmsPolicy-validation-group--1896815765-1">
+        <oj-form-layout id="oj-form-layout--1896815765-1" label-edge="start" class="oj-formlayout-full-width"
+          user-assistance-density="compact">
+          <oj-input-text value="{{ $variables.postPmsPolicy.firstname }}" id="firstname" label-hint="First Name"
+            length.max="30" help-hints.definition="Max 30 characters"></oj-input-text>
+          <oj-input-date label-hint="Date of Birth" value="{{ $variables.postPmsPolicy.dob }}"
+            converter='{"type": "datetime", "options": {"pattern":"dd/MM/yyyy"}}'
+            help-hints.definition="age between 18 and 75 years old" on-value-changed="[[$listeners.inputDateValue]]"></oj-input-date>
+          <oj-input-number value="{{ $variables.postPmsPolicy.age }}" label-hint="Age" readonly="true" id="age"></oj-input-number>
+          <oj-input-number value="{{ $variables.postPmsPolicy.noofpass }}" id="noofpass"
+            label-hint="Number of Passengers" min="0" step="2" max="4" class="oj-form-control-text-align-start"
+            help-hints.definition="2 or 4 passengers"></oj-input-number>
+          <oj-select-single label-hint="Select body type" id="choosebodytypee"
+            on-value-item-changed="[[$listeners.choosebodytypeeValueItem]]" data="[[ $variables.bodyType ]]"
+            item-text="body_type"></oj-select-single>
+          <oj-checkboxset class="oj-choice-direction-column oj-checkboxset-input-start oj-choice-direction-row"
+            on-value-changed="[[$listeners.checkboxSetValue]]">
+            <oj-option value="Y">High Risk</oj-option>
+          </oj-checkboxset>
+          <oj-button label="Calculate Premium" class="oj-button-full-width" chroming="solid"
+            on-oj-action="[[$listeners.buttonAction]]"></oj-button>
+          <oj-input-number value="{{ $variables.postPmsPolicy.premium }}" readonly="true" virtual-keyboard="number"
+            converter='{"options":{"style":"currency","currency":"Dhs"},"type":"number"}'
+            class="oj-form-control-text-align-start oj-form-control-full-width" id="premium" label-hint="Final Premium"></oj-input-number>
+          <oj-input-text label-hint="Policy: " disabled="true" value="{{ $variables.policyNbr }}"
+            class="oj-form-control-full-width oj-form-control-text-align-start"></oj-input-text>
+        </oj-form-layout>
+      </oj-validation-group>
+    </oj-form-layout>
+  </oj-sp-simple-create-edit>
+  <oj-sp-message-unsaved-changes id="dirtyDataWarningDialog"
+    on-oj-sp-discard-changes="[[ $listeners.confirmYesOjAction ]]" on-oj-sp-cancel="[[ $listeners.confirmNoOjAction ]]"></oj-sp-message-unsaved-changes>
+</div>

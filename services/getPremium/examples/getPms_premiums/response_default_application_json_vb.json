@@ -1,0 +1,46 @@
+{
+    "items": [
+        {
+            "body_type": "saloon",
+            "base_premium": 1000,
+            "links": [
+                {
+                    "rel": "self",
+                    "href": "https://g9051959400a6d8-sandbox.adb.eu-frankfurt-1.oraclecloudapps.com/ords/admin/pms_premium/AAAW3yAAAAAAJ70AAA"
+                }
+            ]
+        },
+        {
+            "body_type": "4x4",
+            "base_premium": 2000,
+            "links": [
+                {
+                    "rel": "self",
+                    "href": "https://g9051959400a6d8-sandbox.adb.eu-frankfurt-1.oraclecloudapps.com/ords/admin/pms_premium/AAAW3yAAAAAAJ70AAB"
+                }
+            ]
+        }
+    ],
+    "hasMore": false,
+    "limit": 25,
+    "offset": 0,
+    "count": 2,
+    "links": [
+        {
+            "rel": "self",
+            "href": "https://g9051959400a6d8-sandbox.adb.eu-frankfurt-1.oraclecloudapps.com/ords/admin/pms_premium/"
+        },
+        {
+            "rel": "edit",
+            "href": "https://g9051959400a6d8-sandbox.adb.eu-frankfurt-1.oraclecloudapps.com/ords/admin/pms_premium/"
+        },
+        {
+            "rel": "describedby",
+            "href": "https://g9051959400a6d8-sandbox.adb.eu-frankfurt-1.oraclecloudapps.com/ords/admin/metadata-catalog/pms_premium/"
+        },
+        {
+            "rel": "first",
+            "href": "https://g9051959400a6d8-sandbox.adb.eu-frankfurt-1.oraclecloudapps.com/ords/admin/pms_premium/"
+        }
+    ]
+}

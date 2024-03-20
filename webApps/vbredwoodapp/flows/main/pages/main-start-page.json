@@ -1,0 +1,319 @@
+{
+  "title": "",
+  "description": "",
+  "variables": {
+    "avatar": {
+      "type": {
+        "initials": "string",
+        "src": "string"
+      },
+      "defaultValue": {
+        "initials": "",
+        "src": ""
+      }
+    },
+    "basePremium": {
+      "type": "any"
+    },
+    "bodyType": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "getPremium/getPms_premiums",
+        "responseType": "getPms_basepremium",
+        "itemsPath": "items",
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "body_type"
+          ]
+        },
+        "keyAttributes": [
+          "body_type",
+          "base_premium"
+        ]
+      }
+    },
+    "contextualInfoLabelVisible": {
+      "type": "boolean",
+      "defaultValue": false
+    },
+    "contextualInfoSticky": {
+      "type": "boolean",
+      "defaultValue": false
+    },
+    "create": {
+      "type": "createPms_policyREquest"
+    },
+    "createPostPmsPolicyChainInProgress": {
+      "type": "boolean",
+      "defaultValue": false
+    },
+    "dirtyDataFlag": {
+      "type": "boolean",
+      "defaultValue": false
+    },
+    "displayMode": {
+      "type": "string"
+    },
+    "formState": {
+      "type": "string",
+      "defaultValue": ""
+    },
+    "goToParentOption": {
+      "type": "boolean",
+      "defaultValue": false
+    },
+    "hasHighRisk": {
+      "type": "number",
+      "defaultValue": 0
+    },
+    "isSaved": {
+      "type": "boolean",
+      "defaultValue": false
+    },
+    "objectId": {
+      "type": "string",
+      "defaultValue": ""
+    },
+    "policyNbr": {
+      "type": "any"
+    },
+    "postPmsPolicy": {
+      "type": "postPmsPolicyRequest"
+    },
+    "primaryAlwaysOn": {
+      "type": "boolean",
+      "defaultValue": true
+    },
+    "saveOption": {
+      "type": "string",
+      "defaultValue": "off"
+    }
+
+  },
+  "metadata": {},
+  "types": {
+    "@decorators.createPms_policyREquest": {
+      "endpoint": "postPms_policy",
+      "service": "createpms",
+      "path": "request"
+    },
+    "@decorators.getPms_basepremium": {
+      "endpoint": "getPms_premiums",
+      "service": "getPremium",
+      "path": "response"
+    },
+    "@decorators.getPms_premiums": {
+      "endpoint": "getPms_premiums",
+      "service": "getPremium",
+      "path": "response"
+    },
+    "@decorators.postPmsPolicyRequest": {
+      "endpoint": "postPms_policy",
+      "service": "createpms",
+      "path": "request"
+    },
+    "createPms_policyREquest": {
+      "age": "number",
+      "bodytype": "string",
+      "dob": "string",
+      "firstname": "string",
+      "highrisk": "string",
+      "noofpass": "number",
+      "premium": "number"
+    },
+    "getPms_basepremium": {
+      "items": [
+        {
+          "base_premium": "number",
+          "body_type": "string"
+        }
+      ]
+    },
+    "getPms_premiums": {
+      "items": [
+        {
+          "base_premium": "number",
+          "body_type": "string"
+        }
+      ]
+    },
+    "postPmsPolicyRequest": {
+      "age": "number",
+      "bodytype": "string",
+      "dob": "string",
+      "firstname": "string",
+      "highrisk": "string",
+      "noofpass": "number",
+      "premium": "number"
+    }
+  },
+  "eventListeners": {
+    "buttonAction": {
+      "chains": [
+        {
+          "chain": "ButtonActionChain"
+        }
+      ]
+    },
+    "checkboxSetValue": {
+      "chains": [
+        {
+          "chain": "CheckboxSetValueChangeChain",
+          "parameters": {
+            "value": "{{ $event.detail.value }}"
+          }
+        }
+      ]
+    },
+    "choosebodytypeeValueItem": {
+      "chains": [
+        {
+          "chain": "SelectValueItemChangeChain",
+          "parameters": {
+            "key": "{{$event.detail.value.key}}",
+            "data": "{{$event.detail.value.data}}",
+            "metadata": "{{$event.detail.value.metadata}}"
+          }
+        }
+      ]
+    },
+    "confirmNoOjAction": {
+      "chains": [
+        {
+          "chainId": "dialogResponseChain",
+          "parameters": {
+            "detail": "{{ $event.detail }}",
+            "response": "NO"
+          }
+        }
+      ]
+    },
+    "confirmYesOjAction": {
+      "chains": [
+        {
+          "chainId": "dialogResponseChain",
+          "parameters": {
+            "detail": "{{ $event.detail }}",
+            "response": "YES"
+          }
+        }
+      ]
+    },
+    "inputDateValue": {
+      "chains": [
+        {
+          "chain": "InputDateValueChangeChain",
+          "parameters": {
+            "value": "{{ $event.detail.value }}"
+          }
+        }
+      ]
+    },
+    "ojdynamicFormTransientValueChangeChain": {
+      "chains": [
+        {
+          "chainId": "dynamicFormTransientValueChangeChain",
+          "parameters": {
+            "detail": "{{ $event.detail}}"
+          }
+        }
+      ]
+    },
+    "ojSpCancel": {
+      "chains": [
+        {
+          "chainId": "spCancelChain",
+          "parameters": {
+            "detail": "{{ $event.detail }}"
+          }
+        }
+      ]
+    },
+    "ojSpGoToParent": {
+      "chains": [
+        {
+          "chainId": "goToParent",
+          "parameters": {}
+        }
+      ]
+    },
+    "ojSpSave": {
+      "chains": [
+        {
+          "chain": "createPostPmsPolicyChain"
+        }
+      ]
+    },
+    "ojSpSubmit": {
+      "chains": [
+        {
+          "chain": "createPostPmsPolicyChain"
+        }
+      ]
+    },
+    "saveButtonClicked": {
+      "chains": [
+        {
+          "chain": "createPostPmsPolicyChain"
+        }
+      ]
+    },
+    "vbBeforeExit": {
+      "chains": [
+        {
+          "chainId": "checkBeforeExit",
+          "parameters": {}
+        }
+      ]
+    }
+
+  },
+  "imports": {
+    "components": {
+      "oj-button": {
+        "path": "ojs/ojbutton"
+      },
+      "oj-checkboxset": {
+        "path": "ojs/ojcheckboxset"
+      },
+      "oj-dynamic-form": {
+        "path": "oj-dynamic/form/loader"
+      },
+      "oj-form-layout": {
+        "path": "ojs/ojformlayout"
+      },
+      "oj-input-date": {
+        "path": "ojs/ojdatetimepicker"
+      },
+      "oj-input-number": {
+        "path": "ojs/ojinputnumber"
+      },
+      "oj-input-text": {
+        "path": "ojs/ojinputtext"
+      },
+      "oj-option": {
+        "path": "ojs/ojoption"
+      },
+      "oj-select-single": {
+        "path": "ojs/ojselectsingle"
+      },
+      "oj-sp-message-unsaved-changes": {
+        "path": "oj-sp/message-unsaved-changes/loader"
+      },
+      "oj-sp-simple-create-edit": {
+        "path": "oj-sp/simple-create-edit/loader"
+      },
+      "oj-validation-group": {
+        "path": "ojs/ojvalidationgroup"
+      }
+    },
+    "modules": {
+      "ojValidationDateTime": {
+        "path": "ojs/ojvalidation-datetime"
+      },
+      "ojValidationNumber": {
+        "path": "ojs/ojvalidation-number"
+      }
+    }
+  }
+}

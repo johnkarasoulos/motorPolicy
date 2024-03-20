@@ -1,0 +1,28 @@
+{
+    "policyno": 31,
+    "firstname": "TEST FIRST NAME",
+    "dob": "O1/O1/2000",
+    "age": 24,
+    "bodytype": "saloon",
+    "highrisk": "Y",
+    "noofpass": 4,
+    "premium": 1430,
+    "links": [
+        {
+            "rel": "self",
+            "href": "https://g9051959400a6d8-sandbox.adb.eu-frankfurt-1.oraclecloudapps.com/ords/admin/pms_policy/31"
+        },
+        {
+            "rel": "edit",
+            "href": "https://g9051959400a6d8-sandbox.adb.eu-frankfurt-1.oraclecloudapps.com/ords/admin/pms_policy/31"
+        },
+        {
+            "rel": "describedby",
+            "href": "https://g9051959400a6d8-sandbox.adb.eu-frankfurt-1.oraclecloudapps.com/ords/admin/metadata-catalog/pms_policy/item"
+        },
+        {
+            "rel": "collection",
+            "href": "https://g9051959400a6d8-sandbox.adb.eu-frankfurt-1.oraclecloudapps.com/ords/admin/pms_policy/"
+        }
+    ]
+}
