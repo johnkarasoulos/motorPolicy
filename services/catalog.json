@@ -3,7 +3,7 @@
         "pms": {
             "servers": [
                 {
-                    "url": "https://g9051959400a6d8-sandbox.adb.eu-frankfurt-1.oraclecloudapps.com/ords/admin",
+                    "url": "https://xxxxxxxxxxxxxxxxxxx.adb.xxxxxxxxx.oraclecloudapps.com/ords/admin",
                     "description": "Ords Admin"
                 }
             ]
