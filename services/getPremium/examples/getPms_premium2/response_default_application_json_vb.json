@@ -6,7 +6,7 @@
             "links": [
                 {
                     "rel": "self",
-                    "href": "https://g9051959400a6d8-sandbox.adb.eu-frankfurt-1.oraclecloudapps.com/ords/admin/pms_premium/AAAW3yAAAAAAJ70AAA"
+                    "href": "https://xxxxxxxxxxxxxxxxxxx.adb.xxxxxxxxx.oraclecloudapps.com/ords/admin/pms_premium/AAAW3yAAAAAAJ70AAA"
                 }
             ]
         },
@@ -16,7 +16,7 @@
             "links": [
                 {
                     "rel": "self",
-                    "href": "https://g9051959400a6d8-sandbox.adb.eu-frankfurt-1.oraclecloudapps.com/ords/admin/pms_premium/AAAW3yAAAAAAJ70AAB"
+                    "href": "https://xxxxxxxxxxxxxxxxxxx.adb.xxxxxxxxx.oraclecloudapps.com/ords/admin/pms_premium/AAAW3yAAAAAAJ70AAB"
                 }
             ]
         }
@@ -28,19 +28,19 @@
     "links": [
         {
             "rel": "self",
-            "href": "https://g9051959400a6d8-sandbox.adb.eu-frankfurt-1.oraclecloudapps.com/ords/admin/pms_premium/"
+            "href": "https://xxxxxxxxxxxxxxxxxxx.adb.xxxxxxxxx.oraclecloudapps.com/ords/admin/pms_premium/"
         },
         {
             "rel": "edit",
-            "href": "https://g9051959400a6d8-sandbox.adb.eu-frankfurt-1.oraclecloudapps.com/ords/admin/pms_premium/"
+            "href": "https://xxxxxxxxxxxxxxxxxxx.adb.xxxxxxxxx.oraclecloudapps.com/ords/admin/pms_premium/"
         },
         {
             "rel": "describedby",
-            "href": "https://g9051959400a6d8-sandbox.adb.eu-frankfurt-1.oraclecloudapps.com/ords/admin/metadata-catalog/pms_premium/"
+            "href": "https://xxxxxxxxxxxxxxxxxxx.adb.xxxxxxxxx.oraclecloudapps.com/ords/admin/metadata-catalog/pms_premium/"
         },
         {
             "rel": "first",
-            "href": "https://g9051959400a6d8-sandbox.adb.eu-frankfurt-1.oraclecloudapps.com/ords/admin/pms_premium/"
+            "href": "https://xxxxxxxxxxxxxxxxxxx.adb.xxxxxxxxx.oraclecloudapps.com/ords/admin/pms_premium/"
         }
     ]
 }
