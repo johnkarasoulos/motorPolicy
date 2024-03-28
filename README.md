@@ -7,7 +7,7 @@ The application it is used to enter all the required data, to estimate the cost 
 ```
 CREATE TABLE PMS_PREMIUM ( BODY_TYPE    VARCHAR2 (4000) , BASE_PREMIUM NUMBER (*,0) ) TABLESPACE DATA LOGGING ;
 ```
-Into this table you can insert values like: (BODY_TYPE: Saloon ; BASE_PREMIUM; 1000) and (4x4 ; 2000)
+Into this table you can insert values like: (BODY_TYPE: Saloon ; BASE_PREMIUM: 1000) and (BODY_TYPE: 4x4 ; BASE_PREMIUM: 2000)
 
 #### Policy Management System table 
 ```
