@@ -10,19 +10,19 @@
     "links": [
         {
             "rel": "self",
-            "href": "https://g9051959400a6d8-sandbox.adb.eu-frankfurt-1.oraclecloudapps.com/ords/admin/pms_policy/31"
+            "href": "https://xxxxxxxxxxxxxxxxxxx.adb.xxxxxxxxx.oraclecloudapps.com/ords/admin/pms_policy/31"
         },
         {
             "rel": "edit",
-            "href": "https://g9051959400a6d8-sandbox.adb.eu-frankfurt-1.oraclecloudapps.com/ords/admin/pms_policy/31"
+            "href": "https://xxxxxxxxxxxxxxxxxxx.adb.xxxxxxxxx.oraclecloudapps.com/ords/admin/pms_policy/31"
         },
         {
             "rel": "describedby",
-            "href": "https://g9051959400a6d8-sandbox.adb.eu-frankfurt-1.oraclecloudapps.com/ords/admin/metadata-catalog/pms_policy/item"
+            "href": "https://xxxxxxxxxxxxxxxxxxx.adb.xxxxxxxxx.oraclecloudapps.com/ords/admin/metadata-catalog/pms_policy/item"
         },
         {
             "rel": "collection",
-            "href": "https://g9051959400a6d8-sandbox.adb.eu-frankfurt-1.oraclecloudapps.com/ords/admin/pms_policy/"
+            "href": "https://xxxxxxxxxxxxxxxxxxx.adb.xxxxxxxxx.oraclecloudapps.com/ords/admin/pms_policy/"
         }
     ]
 }
